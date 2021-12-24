@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+	--color-error: hsl(0, 100%, 74%);
+	--color-success: hsl(154, 59%, 51%);
+	--color-accent: hsl(248, 32%, 49%);
+	--color-neutral-100: hsl(246, 25%, 77%);
+	--color-neutral-900: hsl(249, 10%, 26%);
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	color: white;
+}
+
+body {
+	background-image: url(../images/bg-intro-mobile.png);
+	background-color: var(--color-error);
+	padding: 15% 5%;
+	text-align: center;
+}
+
+.signup-header {
+	background-color: var(--color-accent);
+	padding: 10px 15px;
+	border-radius: 10px;
+	box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+#form > * {
+	display: block;
+	margin: auto;
+}
