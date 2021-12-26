@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-	--color-error: hsl(0, 100%, 74%);
-	--color-success: hsl(154, 59%, 51%);
+	--color-red: hsl(0, 100%, 74%);
+	--color-green: hsl(154, 59%, 51%);
 	--color-accent: hsl(248, 32%, 49%);
 	--color-neutral-100: hsl(246, 25%, 77%);
 	--color-neutral-900: hsl(249, 10%, 26%);
@@ -21,21 +21,149 @@ html {
 
 body {
 	background-image: url(../images/bg-intro-mobile.png);
-	background-color: var(--color-error);
+	background-color: var(--color-red);
 	padding: 15% 5%;
 	text-align: center;
 }
 
 .signup-header {
 	background-color: var(--color-accent);
-	padding: 10px 15px;
+	padding: 10px 20%;
+	cursor: pointer;
 	border-radius: 10px;
-	box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.1);
-	-webkit-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 8px 0px 0px rgba(15, 10, 10, 0.1);
 	-moz-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
-#form > * {
+.form {
+	padding: 15px;
+	border-radius: 8px;
+	background-color: #fff;
+}
+
+.form input {
 	display: block;
-	margin: auto;
+	width: 100%;
+	outline: none;
+	padding: 10px;
+	border: 2px solid #f0f0f0;
+	border-radius: 3px;
+	font-weight: 600;
+}
+
+.form input:focus {
+	border-color: var(--color-accent);
+}
+
+em {
+	text-align: right;
+	visibility: hidden;
+	display: block;
+	font-size: 12px;
+	margin: 3px 5px;
+}
+
+.form-control.success em {
+	visibility: hidden;
+}
+
+.form-control.success input {
+	border-color: var(--color-green);
+}
+
+.form-control.error em {
+	visibility: visible;
+	color: red;
+}
+
+.form-control.error input {
+	border-color: var(--color-red);
+}
+
+.form #submit {
+	width: 100%;
+	cursor: pointer;
+	background-color: var(--color-green);
+	border-radius: 10px;
+	border: none;
+	color: white;
+	padding: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+	-webkit-box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+p.terms {
+	padding: 0 10px;
+	font-size: 12px;
+	color: var(--color-neutral-900);
+	margin-bottom: 0;
+}
+.terms a {
+	display: inline;
+	color: var(--color-red);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		max-width: 500px;
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		background-image: url(../images/bg-intro-desktop.png);
+		background-color: var(--color-red);
+		padding: 7% 10%;
+		font-size: 1.25rem;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	article {
+		text-align: left;
+		display: inline-block;
+	}
+
+	article h2 {
+		font-size: 3rem;
+		font-weight: 700;
+	}
+
+	.form-container {
+		width: 101%;
+		display: inline-block;
+		font-size: 1.2rem;
+		margin-left: 10%;
+	}
+
+	.signup-header {
+		padding: 15px 0;
+		font-size: 1.3rem;
+	}
+
+	.form {
+		padding: 7%;
+	}
+
+	.form input {
+		padding: 10px;
+		font-size: 1rem;
+		font-weight: 500;
+	}
+
+	#submit {
+		font-size: 1.125rem;
+		letter-spacing: 1px;
+	}
 }
